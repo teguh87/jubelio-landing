@@ -116,7 +116,13 @@ export default class LoginPage extends Component {
                                     <img src={LogoDark} alt="logo"></img>
                                 </a>
                             </div>
-                            <p>Sign in to start your session</p>
+                            <p>
+                                Sign in to start your session with 
+                                <br/>
+                                username: demo@jubelio.com 
+                                <br/>
+                                password: 123456
+                            </p>
                             <form onSubmit={this.handleSubmit} noValidate className={displayErrors ? 'displayErrors' : ''} >
                                     <div className="field">
                                         <div className="control">
@@ -126,7 +132,7 @@ export default class LoginPage extends Component {
                                                 required 
                                                 className={["input", "custom-control", "is-medium"].join(' ')} 
                                                 type="text"
-                                                placeholder="Email"/>
+                                                placeholder="eg. demo@jubelio.co"/>
                                         </div>
                                     </div>
                                     <div className="field">
