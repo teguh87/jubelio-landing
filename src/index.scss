@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+
+
+// 2. Setup your Custom Colors
+$family-primary: 'Fira Sans', $family-sans-serif;
+$color : #929292;
+$body-size: 14px !default;
+$purple: hsl(275,87%,45%);
+$purple-invert: findColorInvert($purple);
+// 3. Add new color variables to the color map.
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "purple":($purple, $purple-invert),
+);
+$colors: map-merge($colors, $addColors);
+@import '../node_modules/bulma/bulma';
+// @import '../node_modules/bulma-extensions/src/sass/index';
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 600;
+  color: #222222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 200); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+  
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+.btn {
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  font-size: 14px;
+  padding: 4px 20px 4px 20px;
+  font-weight: 300;
+  &.btn-flat {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
+    min-width: 400px;
+    height: 43px;
+  }
+}
+
+.default-theme-btn {
+  border-radius: 5px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 16px 35px;
+  text-transform: uppercase;
+  border: 1px solid;
+  transition: .3s;
+}
+
+
+
+section {
+  .container {
+    padding: 34px;
+  }  
+}
+
+.section-padding.blue-bg-2.promotional-section .section-title {
+  color: #fff;
+}
+
+.section-padding.blue-bg-2.promotional-section .section-title h2 {
+  color: #fff;
+}
+
+.section-padding {
+  padding: 130px 0;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.dark-bg {
+  background: #f8faff;
+}
+
+.blue-bg {
+  background: #4776e6;
+}
+
+.white-bg {
+  background: #ffffff;
+}
+
+.container-fluid{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: block;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+.section-title{
+  margin-bottom: 80px;
+  text-align: center;
+
+  h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+  }
+
+  p {
+      font-size: 16px; 
+      color: inherit;
+  }
+}
+
+.custom-control {
+  border-radius: 0px;
+  box-shadow: none;
+  border: 0;
+  border-bottom: solid 1px #d9d9d9;
+  padding: 10px 0;
+  &:not(select){
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  &:focus{
+    border-color: #0077d3;
+    box-shadow: none;
+  }
+}
+
+.icheck {
+  & > label {
+    padding: 0;
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px; 
+      padding-left: 12px; 
+      margin: 10px 10px 12px 0;
+    }
+  }
+}
+
+.displayErrors {
+  input:invalid {
+      border-color: red;
+  }
+}

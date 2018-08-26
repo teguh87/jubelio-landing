@@ -1,0 +1,48 @@
+.login-page {
+  min-width: 100%;
+  min-height: 829px;
+  position: relative; }
+  .login-page.bg {
+    background: url("../../assets/jubelio-cover-bg.jpg") no-repeat 50% 0;
+    background-size: cover; }
+  .login-page .login-box {
+    right: 0px;
+    position: absolute;
+    height: 820px;
+    min-width: 360px;
+    background: #fafafa;
+    overflow: hidden;
+    margin: 0;
+    -webkit-box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .login-page .login-box-body {
+      border-radius: 0px;
+      height: 100%;
+      background: #fff;
+      padding: 20px;
+      border-top: 0;
+      color: #666; }
+      .login-page .login-box-body .login-logo {
+        top: 44px;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 12px;
+        margin-top: 124px;
+        font-weight: 300;
+        align-content: center;
+        display: block; }
+        .login-page .login-box-body .login-logo a {
+          color: #444; }
+        .login-page .login-box-body .login-logo img {
+          height: 58px;
+          width: 130px;
+          margin: 30px auto;
+          padding: 10px; }
+      .login-page .login-box-body p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px 25px 20px; }
